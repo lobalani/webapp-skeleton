@@ -1,0 +1,11 @@
+{
+  "name": "webapp_skeleton",
+  "version": "1.0.0",
+  "description": "A template or skeleton setup for future web applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lokesh Balani @lobalani",
+  "license": "MIT"
+}
