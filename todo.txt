@@ -1,0 +1,14 @@
+WebApp Template Skeleton
+
+This is a Skeleton Architecture Setup for rapid deployment of private projects.
+
+User Stories:
+* "Hello World" server
+- "Hello World" client (one browser)
+- suppport multiple browsers
+
+Engineering Tasks: [To get the user Stories working]
+* automated build
+- continuous integration
+- server-side testing 
+- client-side testing
