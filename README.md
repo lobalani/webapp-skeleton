@@ -11,6 +11,6 @@ Command Line Quick Referecne:
 Prerequisites
 -------------
 - Install a Code Editor
-- Install [Node.js] (https://nodejs.org/en/)
-- Install [git] (https://git-scm.com)
+- Install [Node.js](https://nodejs.org/en/)
+- Install [git](https://git-scm.com)
 - Create project Directory
