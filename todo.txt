@@ -2,6 +2,11 @@ WebApp Template Skeleton
 
 This is a Skeleton Architecture Setup for rapid deployment of private projects.
 
+Status
+._      :Task Completed
+*       :Task In-Progress
+-       :Task Defined
+
 User Stories:
 * "Hello World" server
 - "Hello World" client (one browser)
@@ -12,3 +17,9 @@ Engineering Tasks: [To get the user Stories working]
 - continuous integration
 - server-side testing 
 - client-side testing
+
+Automated build
+._ configure node and npm
+._ create initial package.json
+* use Gulp as JS task runner
+- Include static code analysis (Linting)
