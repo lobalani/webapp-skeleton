@@ -13,6 +13,7 @@
     "newcap": true,
     "noarg": true,
     "noempty": true,
+    "nocomma": true,
     "nonbsp": true,
     "nonew": true,
     "plusplus": false,
