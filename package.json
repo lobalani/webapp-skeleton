@@ -6,6 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predev:build": "npm rebuild",
+    "dev:build": "gulp hello-world",
     "gulp": "gulp"
   },
   "author": "Lokesh Balani @lobalani",
