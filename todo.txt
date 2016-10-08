@@ -21,5 +21,5 @@ Engineering Tasks: [To get the user Stories working]
 Automated build
 ._ configure node and npm
 ._ create initial package.json
-* use Gulp as JS task runner
-- Include static code analysis (Linting)
+._ use Gulp as JS task runner
+* Include static code analysis (Linting)
