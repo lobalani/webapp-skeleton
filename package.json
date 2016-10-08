@@ -12,6 +12,7 @@
     "predev:build": "npm rebuild",
     "dev:build": "gulp hello-world",
     "package:install": "npm install --ignore-scripts --save-dev",
+    "package:uninstall": "npm uninstall --save-dev",
     "gulp": "gulp",
     "jshint": "jshint"
   },
