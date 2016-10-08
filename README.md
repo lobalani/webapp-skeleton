@@ -14,3 +14,11 @@ Prerequisites
 - Install [Node.js](https://nodejs.org/en/)
 - Install [git](https://git-scm.com)
 - Create project Directory
+
+How to setup a new Project with this Skeleton:
+---------------------------------------------
+- Open terminal (Mac OSX/Linux) or command prompt (Windows)
+- Change to the Directory that will contain the project. In the terminal, type `cd <Directory_Name>` (where `<Directory_Name>` is the Directory that will contain the project.
+- Copy the source repository to your machine, `git clone <Git_Repo_URL_to_Clone_Goes_Here>`
+- Change to the project directory: `cd <Path_to_the_Project_Directory>`
+
