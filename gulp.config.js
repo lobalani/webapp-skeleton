@@ -3,7 +3,7 @@ module.exports = function() {
         alljs: [
             './*js'
         ]
-    }
+    };
 
     return config;
 };
