@@ -30,3 +30,18 @@ Advantages to using NPM as build tool
 - Code, Not Configuration
 - Straightforward and simple
 
+Installing Local Dependencies:
+------------------------------
+- Install dependency : `npm install --ignore-scripts --save-dev gulp`
+- Check it in : 
+```
+git add .
+git commit -am "Installed gulp"
+```
+- Run install scripts : `npm rebuild`
+- Look for build artifacts : `git status`
+- Ignore build artifacts : [add any files listed by `git status` to `.gitignore` file]
+
+*NOTE*: 
+We install packages with --ignore-scripts so as not to include build scripts in the `node_modules` folder, as we do not want to check in any build artifacts.
+`npm rebuild` runs the scripts under `node_modules` directory to create all the build artifacts. 
