@@ -44,7 +44,6 @@
     "maxerr": 50,
     "moz": false,
     "multistr": false,
-    "notypeof": false,
     "proto": false,
     "scripturl": false,
     "shadow": false,
