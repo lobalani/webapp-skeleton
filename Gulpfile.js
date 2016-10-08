@@ -1,12 +1,13 @@
 //require dependencies
 var gulp = require('gulp');
+var semver = require('semver');
 var $ = require('gulp-load-plugins')({ lazy: true });
 
 //require config files
 var packageJson = require('./package.json');
 
 //constants
-var EXPECTED_NODE_VERSION = "v" + packageJson.engines.node;
+var EXPECTED_NODE_VERSION = packageJson.engines.node;
 
 gulp.task('default', ["nodeVersion:check"], function() {
     log("\n\nBUILD SUCCESSFUL");
@@ -19,7 +20,7 @@ gulp.task('nodeVersion:check', function() {
 
     var actualVersion = process.version;
 
-    if(actualVersion !== EXPECTED_NODE_VERSION) {
+    if(semver.neq(EXPECTED_NODE_VERSION, actualVersion)) {
         errorLog("Incorrect Node Version: expected " + EXPECTED_NODE_VERSION + ", but was " + actualVersion);
     } else {
         log("Correct Node Version Installed");
