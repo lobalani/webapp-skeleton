@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "A template or skeleton setup for future web applications.",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lokesh Balani @lobalani",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
