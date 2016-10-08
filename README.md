@@ -11,7 +11,7 @@ Command Line Quick Referecne:
 Prerequisites
 -------------
 - Install a Code Editor
-- Install [Node.js](https://nodejs.org/en/)
+- Install [Node.js v5.6.0](https://nodejs.org/en/)
 - Install [git](https://git-scm.com)
 - Create project Directory
 
@@ -37,6 +37,18 @@ Advantages to using NPM as build tool
 - Code, Not Configuration
 - Straightforward and simple
 
+Installing global Dependencies
+------------------------------
+**npm** - We are using npm to install server side JavaScript Dependencies
+
+**bower** - We are using bower to install Client side JavaScript Dependencies
+
+**gulp** - JavaScript Task Runner
+
+- Install bower globally : `npm install -g bower`
+- List all globally installed npm packages : `npm list -g --depth=0`
+- Verify bower is installed globally
+
 Installing Local Dependencies:
 ------------------------------
 - Install dependency : `npm install --ignore-scripts --save-dev gulp`
@@ -51,4 +63,12 @@ git commit -am "Installed gulp"
 
 *NOTE*: 
 We install packages with --ignore-scripts so as not to include build scripts in the `node_modules` folder, as we do not want to check in any build artifacts.
-`npm rebuild` runs the scripts under `node_modules` directory to create all the build artifacts. 
+`npm rebuild` runs the scripts under `node_modules` directory to create all the build artifacts.
+
+Gulp : In a Nutshell
+--------------------
+- Install gulp locally
+- Install dependent packages
+- Code gulp task
+- Execute the task
+
