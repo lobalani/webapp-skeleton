@@ -14,6 +14,40 @@
     //constants
     var EXPECTED_NODE_VERSION = packageJson.engines.node;
 
+    gulp.task('default', ['nodeVersion:check'], function() {
+        log('\n\nBUILD SUCCESSFUL');
+    });
+
+    /**
+     * Checking Node version installed on the system.
+     * Need to have Node.js v5.6.0 for the setup to work correctly
+     */
+    gulp.task('nodeVersion:check', function() {
+        log('Checking Node version...');
+
+        var actualVersion = process.version;
+
+        if(semver.neq(EXPECTED_NODE_VERSION, actualVersion)) {
+            errorLog('Incorrect Node Version: expected ' + EXPECTED_NODE_VERSION + ', but was ' + actualVersion);
+        } else {
+            log('Correct Node Version Installed');
+        }
+    });
+
+    /**
+     * JavaScript Linting with JSHint and JSCS
+     */
+    gulp.task('jslint', function() {
+        log('Analysing JavaScript files with JSHint and JSCS');
+
+        return gulp.src(config.alljs)
+                   .pipe($.if(args.verbose, $.print()))
+                   .pipe($.jscs())
+                   .pipe($.jshint(config.jshintrc))
+                   .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
+                   .pipe($.jshint.reporter('fail'));
+    });
+
     /* Helper Functions */
 
     /**
@@ -56,38 +90,4 @@
 
         process.exit(-1);
     }
-
-    gulp.task('default', ['nodeVersion:check'], function() {
-        log('\n\nBUILD SUCCESSFUL');
-    });
-
-    /**
-     * Checking Node version installed on the system.
-     * Need to have Node.js v5.6.0 for the setup to work correctly
-     */
-    gulp.task('nodeVersion:check', function() {
-        log('Checking Node version...');
-
-        var actualVersion = process.version;
-
-        if(semver.neq(EXPECTED_NODE_VERSION, actualVersion)) {
-            errorLog('Incorrect Node Version: expected ' + EXPECTED_NODE_VERSION + ', but was ' + actualVersion);
-        } else {
-            log('Correct Node Version Installed');
-        }
-    });
-
-    /**
-     * JavaScript Linting with JSHint and JSCS
-     */
-    gulp.task('jslint', function() {
-        log('Analysing JavaScript files with JSHint and JSCS');
-
-        return gulp.src(config.alljs)
-                   .pipe($.if(args.verbose, $.print()))
-                   .pipe($.jscs())
-                   .pipe($.jshint(config.jshintrc))
-                   .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
-                   .pipe($.jshint.reporter('fail'));
-    });
 })();
