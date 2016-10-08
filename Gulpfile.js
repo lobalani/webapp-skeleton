@@ -13,8 +13,11 @@ gulp.task('default', ["nodeVersion:check"], function() {
     log("\n\nBUILD SUCCESSFUL");
 });
 
-//Checking Node version installed on the system.
-//Need to have Node.js v5.6.0 for the setup to work correctly
+/**
+ * Checking Node version installed on the system.
+ * Need to have Node.js v5.6.0 for the setup to work correctly
+ * 
+ **/
 gulp.task('nodeVersion:check', function() {
     log("Checking Node version...");
 
@@ -30,7 +33,9 @@ gulp.task('nodeVersion:check', function() {
 
 /* Helper Functions */
 
-//Log function: outputs the log message in blue
+/**
+ * Log output message in inverse color
+ */
 function log(msg) {
     if(typeof(msg) === "object"){
         for(var key in msg){
@@ -43,7 +48,9 @@ function log(msg) {
     }
 };
 
-//Error function : outputs the error message in red
+/**
+ * Log error messages in red color
+ */
 function error(msg) {
     if(typeof(msg) === "object"){
         for(var key in msg){
@@ -55,8 +62,9 @@ function error(msg) {
         $.util.log($.util.colors.red(msg));
     }
 };
+
 /**
- * Log error message and exit the process
+ * Log error messages using error() helper function and exit the process
  */
 function errorLog(errorMsg) {
     error("*** Start of Error ***");
