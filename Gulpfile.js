@@ -9,6 +9,7 @@
 
     //require config files
     var packageJson = require('./package.json');
+    var config = require('./gulp.config')();
 
     //constants
     var EXPECTED_NODE_VERSION = packageJson.engines.node;
@@ -82,7 +83,7 @@
     gulp.task('jslint', function() {
         log('Analysing JavaScript files with JSHint and JSCS');
 
-        return gulp.src('./*.js')
+        return gulp.src(config.alljs)
                    .pipe($.if(args.verbose, $.print()))
                    .pipe($.jscs())
                    .pipe($.jshint())
