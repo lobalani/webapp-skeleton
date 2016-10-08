@@ -14,7 +14,8 @@
     "package:install": "npm install --ignore-scripts --save-dev",
     "package:uninstall": "npm uninstall --save-dev",
     "gulp": "gulp",
-    "jshint": "jshint"
+    "jshint": "jshint",
+    "gulp:jslint": "gulp jslint --verbose"
   },
   "author": "Lokesh Balani @lobalani",
   "license": "MIT",
