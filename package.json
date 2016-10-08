@@ -12,7 +12,8 @@
     "predev:build": "npm rebuild",
     "dev:build": "gulp hello-world",
     "package:install": "npm install --ignore-scripts --save-dev",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "jshint": "jshint"
   },
   "author": "Lokesh Balani @lobalani",
   "license": "MIT",
@@ -20,6 +21,7 @@
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.3.0",
     "gulp-util": "^3.0.7",
+    "jshint": "^2.9.3",
     "semver": "^5.3.0"
   }
 }
