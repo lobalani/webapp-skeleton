@@ -22,3 +22,10 @@ How to setup a new Project with this Skeleton:
 - Copy the source repository to your machine, `git clone <Git_Repo_URL_to_Clone_Goes_Here>`
 - Change to the project directory: `cd <Path_to_the_Project_Directory>`
 
+Advantages to using NPM as build tool
+-------------------------------------
+- Self documentation
+- Command Line Processing
+- Dependency Resolution
+- Code, Not Configuration
+- Straightforward and simple
