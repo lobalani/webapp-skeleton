@@ -5,8 +5,8 @@ var $ = require('gulp-load-plugins')({ lazy: true });
 //constants
 var EXPECTED_NODE_VERSION = "v5.6.0";
 
-gulp.task('hello-world', function() {
-    log('Hello, Welcome to Gulp');
+gulp.task('default', ["nodeVersion:check"], function() {
+    log("\n\nBUILD SUCCESSFUL");
 });
 
 //Checking Node version installed on the system.
@@ -31,11 +31,11 @@ function log(msg) {
     if(typeof(msg) === "object"){
         for(var key in msg){
             if(msg.hasOwnProperty(item)){
-                $.util.log($.util.colors.blue(msg[key]));
+                $.util.log($.util.colors.inverse(msg[key]));
             }
         }
     } else {
-        $.util.log($.util.colors.blue(msg));
+        $.util.log($.util.colors.inverse(msg));
     }
 };
 
