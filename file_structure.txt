@@ -3,6 +3,10 @@ webapp_skeleton/
  |---package.json
  |---README.md
  |---.gitignore
+ |---.jscsrc
+ |---.jshintrc
+ |---Gulpfile.js
+ |---gulp.config.js
  |
  |---node_modules/
  |---.git/
