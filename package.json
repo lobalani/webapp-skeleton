@@ -4,6 +4,9 @@
   "description": "A template or skeleton setup for future web applications.",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": "5.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predev:build": "npm rebuild",

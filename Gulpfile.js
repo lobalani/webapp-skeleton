@@ -2,8 +2,11 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({ lazy: true });
 
+//require config files
+var packageJson = require('./package.json');
+
 //constants
-var EXPECTED_NODE_VERSION = "v5.6.0";
+var EXPECTED_NODE_VERSION = "v" + packageJson.engines.node;
 
 gulp.task('default', ["nodeVersion:check"], function() {
     log("\n\nBUILD SUCCESSFUL");
