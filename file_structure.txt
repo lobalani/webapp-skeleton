@@ -4,7 +4,7 @@ webapp_skeleton/
  |---README.md
  |---.gitignore
  |
- |
+ |---node_modules/
  |---.git/
  |
  |
