@@ -62,8 +62,7 @@
     /**
      * Checking Node version installed on the system.
      * Need to have Node.js v5.6.0 for the setup to work correctly
-     * 
-     **/
+     */
     gulp.task('nodeVersion:check', function() {
         log('Checking Node version...');
 
@@ -74,5 +73,18 @@
         } else {
             log('Correct Node Version Installed');
         }
+    });
+
+    /**
+     * JavaScript Linting with JSHint and JSCS
+     */
+    gulp.task('jslint', function() {
+        log('Analysing JavaScript files with JSHint and JSCS');
+
+        return gulp.src('./*.js')
+                   .pipe($.jscs())
+                   .pipe($.jshint())
+                   .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
+                   .pipe($.jshint.reporter('fail'));
     });
 })();
