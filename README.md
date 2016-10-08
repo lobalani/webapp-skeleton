@@ -20,6 +20,8 @@ How to use npm global without sudo on OSX
 Follow the instructions in the link :
 <https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/>
 
+For developer machines, this moves npm packages to a folder that does not require administrator privilages.
+
 How to setup a new Project with this Skeleton:
 ---------------------------------------------
 - Open terminal (Mac OSX/Linux) or command prompt (Windows)
