@@ -4,6 +4,7 @@
     //require dependencies
     var gulp = require('gulp');
     var semver = require('semver');
+    var args = require('yargs').argv;
     var $ = require('gulp-load-plugins')({ lazy: true });
 
     //require config files
@@ -82,6 +83,7 @@
         log('Analysing JavaScript files with JSHint and JSCS');
 
         return gulp.src('./*.js')
+                   .pipe($.if(args.verbose, $.print()))
                    .pipe($.jscs())
                    .pipe($.jshint())
                    .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
