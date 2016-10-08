@@ -15,6 +15,11 @@ Prerequisites
 - Install [git](https://git-scm.com)
 - Create project Directory
 
+How to use npm global without sudo on OSX
+-----------------------------------------
+Follow the instructions in the link :
+<https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/>
+
 How to setup a new Project with this Skeleton:
 ---------------------------------------------
 - Open terminal (Mac OSX/Linux) or command prompt (Windows)
